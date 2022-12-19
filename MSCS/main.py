@@ -30,7 +30,7 @@ def count_weights(count_v, vertexes):
 
 
 def main():
-    n, V = read_from_file("../input/Taxicab_64.txt")
+    n, V = read_from_file("./input/Taxicab_64.txt")
     matrix_weight = count_weights(n, V)
     new_matrix = np.zeros((n, n))
     for i in range(n):
@@ -68,7 +68,7 @@ def main():
     suma = int(np.sum(new_matrix))
     dlin_r = int(np.max(new_matrix))
 
-    with open("../output/Kulikova_64_1.txt", "w", encoding="utf-8") as f:
+    with open("./output/Kulikova_64_1.txt", "w", encoding="utf-8") as f:
         f.write(f"c Вес кубического подграфа = {suma}, самое длинное ребро = {dlin_r},\n")
         f.write(f"p edge {n} {int((new_matrix != 0).sum())}\n")
         for i in range(n):
